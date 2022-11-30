@@ -8,7 +8,7 @@
 </head>
 <body class="page-body">
   <header class="main-header">
-    <span class="main-header__logo">
+    <a class="main-header__logo" href="index.html">
       <img
             class="main-header__logo-image"
             src="images/svg/logo.svg"
@@ -16,9 +16,11 @@
             width="185"
             height="96"
           />
-     </span>
+    </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню."></button>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть/закрыть меню.</span>
+      </button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="index.html">Главная</a>
@@ -36,9 +38,19 @@
     </nav>
   </header>
   <main class="main-container">
+    <section class="welcome welcome--inner">
+      <h1 class="visually-hidden">Форма обратной связи.</h1>
+      <img
+        class="welcome__inner"
+        src="images/svg/welcome.svg"
+        alt="Добро пожаловать в великолепный городок Седоны. Потому что гранд-Каньон - отстой!"
+        width="282"
+        height="214"
+      />
+    </section>
     <section class="feedback">
       <header class="feedback__header">
-        <h1 class="feedback__main-title">Оставьте свой отзыв</h2>
+        <h2 class="feedback__main-title">Оставьте свой отзыв</h2>
         <p class="feedback__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
       </header>
       <form class="feedback__form" method="POST" action="https://echo.htmlacademy.ru">
@@ -46,28 +58,28 @@
           <legend class="user-data__title">Представьтесь:</legend>
           <div class="user-data__content-item">
             <label class="user-data__content-name" for="appointment-name">Имя*:</label>
-            <input class="user-data__form-content" type="text" id="appointment-name" name="name" placeholder="Петр">
+            <input class="user-data__form-content" type="text" id="appointment-name" name="name" placeholder="Петр" required>
           </div>
           <div class="user-data__content-item">
             <label class="user-data__content-name" for="appointment-surname">Фамилия*:</label>
             <input class="user-data__form-content" type="text" id="appointment-surname" name="surname"
-              placeholder="Пустота">
+              placeholder="Пустота"  required>
           </div>
           <div class="user-data__content-item">
             <label class="user-data__content-name" for="appointment-patronymic">Отчество:</label>
             <input class="user-data__form-content" type="text" id="appointment-patronymic" name="patronymic"
-              placeholder="Викторович">
+              placeholder="Викторович"  required>
           </div>
         </fieldset>
         <fieldset class="feedback__group user-data">
           <legend class="user-data__title">Контактная информация:</legend>
           <div class="user-data__content-item">
             <label class="user-data__content-name" for="appointment-phone">Контактный телефон*:</label>
-            <input class="user-data__form-content user-data__form-content--icon" type="tel" id="appointment-phone" name="phone" placeholder="Введите телефон">
+            <input class="user-data__form-content user-data__form-content--icon" type="tel" id="appointment-phone" name="phone" placeholder="Введите телефон"  required>
           </div>
           <div class="user-data__content-item">
             <label class="user-data__content-name" for="appointment-email">Электронная почта*:</label>
-            <input class="user-data__form-content user-data__form-content--icon" type="email" id="appointment-phone" name="phone" placeholder="Введите e-mail">
+            <input class="user-data__form-content user-data__form-content--icon" type="email" id="appointment-email" name="phone" placeholder="Введите e-mail"  required>
           </div>
         </fieldset>
         <fieldset class="feedback__group user-opinion">
@@ -114,7 +126,7 @@
         <fieldset class="feedback__group user-emotions">
           <legend class="user-emotions__title">Опишите свои эмоции:</legend>
           <textarea class="user-emotions__input" id="additional-text" name="additional-text" rows="4" placeholder="Опишите подробно все свои восторги"></textarea>
-          <label class="visually-hidden" for="additional-text">Описание посещения в свободной форме</label>
+          <label class="visually-hidden" for="additional-text">Описание посещения в свободной форме.</label>
         </fieldset>
         <div class="feedback__actions form-actions">
           <button class="form-actions__submit" type="submit">Отправить отзыв</button>
@@ -124,32 +136,28 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__hashtag">
-      <p class="hachtag">#visitsedona</p>
-    </div>
-    <div class="main-footer__social social">
-      <ul class="social__list">
-        <li class="social__item">
-          <a class="social__link social__link--vk" href="#">
-            <span class="visually-hidden">Мы во Вконтакте</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--telegram" href="#">
-            <span class="visually-hidden">Мы в Telegram</span>
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link social__link--youtube" href="#">
-            <span class="visually-hidden">Мы на Youtube</span>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
-    </div>
+    <p class="main-footer__hashtag">#visitsedona</p>
+    <ul class="main-footer__social social">
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="#">
+          <span class="visually-hidden">Мы во Вконтакте.</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--telegram" href="#">
+          <span class="visually-hidden">Мы в Telegram.</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--youtube" href="#">
+          <span class="visually-hidden">Мы на Youtube.</span>
+        </a>
+      </li>
+    </ul>
+    <a class="main-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+      <span class="main-footer__copyright-text">Разработано</span>
+      <svg class="main-footer__copyright-icon" width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="currentColor" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
+    </a>
   </footer>
 </body>
 </html>
