@@ -1,0 +1,15 @@
+.user-visiting__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.user-visiting__content-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.user-visiting__content-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}

@@ -1,0 +1,21 @@
+.photo {
+  padding-top: 30px;
+}
+
+.photo__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.photo__text {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 40px;
+  color: $color-night-rider;
+}

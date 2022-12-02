@@ -1,0 +1,15 @@
+.welcome {
+  background-color: $color-pattens-blue;
+  background-image: url("../../images/welcome-background.jpg");
+  background-position: 50% 50%;
+  background-size: 901px 100%;
+  background-repeat: no-repeat;
+  padding-top: 90px;
+  padding-bottom: 79px;
+
+  &--inner {
+    padding-bottom: 60px;
+    padding-top: 57px;
+    background-size: auto;
+  }
+}

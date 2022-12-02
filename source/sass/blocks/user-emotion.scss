@@ -1,0 +1,15 @@
+.user-emotions__input {
+  resize: none;
+  padding: 16px;
+  border: none;
+  background-color: $color-white-smoke;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: $color-default-black;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
