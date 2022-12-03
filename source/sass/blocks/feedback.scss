@@ -1,0 +1,38 @@
+.feedback {
+  padding-top: 36px;
+  padding-bottom: 24px;
+}
+
+.feedback__header {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.feedback__main-title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.feedback__intro {
+  color: $color-night-rider;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.feedback__group {
+  border: none;
+  padding: 0;
+  padding-bottom: 39px;
+  display: block;
+}
+
+.feedback__actions-description {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: $color-night-rider;
+  opacity: 0.3;
+}

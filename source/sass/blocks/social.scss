@@ -1,0 +1,14 @@
+.social {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  gap: 6px;
+}
+
+.social__item {
+  width: 48px;
+  height: 48px;
+  background-color: $color-seagull;
+}

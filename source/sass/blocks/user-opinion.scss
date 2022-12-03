@@ -1,0 +1,15 @@
+.user-opinion__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.user-opinion__content-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.user-opinion__content-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}

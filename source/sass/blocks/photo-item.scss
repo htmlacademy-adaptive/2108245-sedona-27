@@ -1,0 +1,41 @@
+.photo-item {
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  border-top: 1px solid $color-whisper-5;
+  border-bottom: 1px solid $color-whisper-5;
+}
+
+.photo-item__image {
+  background-color: $color-cream-brulee;
+  margin-bottom: 15px;
+}
+
+.photo-item__subtitle {
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.photo-item__author {
+  margin: 0;
+  margin-bottom: 11px;
+  color: $color-night-rider;
+}
+
+.photo-item__likes {
+  display: flex;
+}
+
+.photo-item__likes-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: auto 14px auto 0;
+  cursor: pointer;
+}
+
+.photo-item__likes-count {
+  font-weight: 700;
+  margin: auto 0;
+}

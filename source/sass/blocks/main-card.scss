@@ -1,0 +1,24 @@
+.main-card {
+  background-color: $color-seagull;
+  color: $color-default-white;
+}
+
+.main-card__inner {
+  padding-top: 54px;
+  padding-bottom: 40px;
+}
+
+.main-card__title {
+  margin: 0;
+  margin-bottom: 11px;
+}
+
+.main-card__number {
+  display: block;
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.main-card__subject {
+  margin: 0;
+}
