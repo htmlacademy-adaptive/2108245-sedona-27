@@ -1,3 +1,45 @@
-.main-nav {
-  background-color: $color-seagull;
+.main-nav__list {
+  z-index: 1;
+
+  width: 100%;
+  margin-top: 96px;
+
+  @media (min-width: $vp-tablet) {
+    position: static;
+
+    margin-top: 0;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 4;
+
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $vp-tablet) {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 20px;
+
+    width: 23px;
+    height: 4px;
+
+    background-color: $color-seagull;
+    box-shadow: 0 9px 0 0 $color-seagull, 0 18px 0 0 $color-seagull;
+  }
 }

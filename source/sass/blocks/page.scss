@@ -3,22 +3,27 @@
 }
 
 .page__body {
-  margin: 0;
   display: flex;
   min-width: $vp-mobile;
   min-height: 100%;
-  font-family: $ff-default;
+  margin: 0;
+
   font-weight: 400;
   font-size: $fz-default;
   line-height: 21px;
+  font-family: $ff-default;
   color: $color-default-black;
-  background-color: $color-whisper-7;
+
+  background-color: $color-white-smoke;
 }
 
 .page__wrapper {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: $vp-desktop;
   margin: 0 auto;
-  background-color: #ffffff;
+
+  background-color: $color-default-white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }

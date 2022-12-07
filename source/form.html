@@ -11,7 +11,7 @@
 
 <body class="page__body">
   <div class="page__wrapper">
-    <header class="main-header container">
+    <header class="main-header">
       <a class="main-header__logo" href="index.html">
         <img class="main-header__logo-image" src="images/svg/logo.svg" alt="Логотип сайта городка Седоны." width="185"
           height="96" />
@@ -45,42 +45,44 @@
       </section>
       <section class="feedback container">
         <header class="feedback__header">
-          <h2 class="feedback__main-title">Оставьте свой отзыв</h2>
-          <p class="feedback__intro">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
-            достопримечательностях</p>
+          <h2 class="feedback__main-title title title--big">Оставьте свой отзыв</h2>
+          <p class="feedback__intro main-text">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них,
+            а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
         </header>
         <form class="feedback__form" method="POST" action="https://echo.htmlacademy.ru">
-          <fieldset class="feedback__group user-data">
-            <legend class="user-data__title">Представьтесь:</legend>
-            <div class="user-data__content-item">
-              <label class="user-data__content-name" for="appointment-name">Имя*:</label>
-              <input class="user-data__form-content" type="text" id="appointment-name" name="name" placeholder="Петр"
-                required>
-            </div>
-            <div class="user-data__content-item">
-              <label class="user-data__content-name" for="appointment-surname">Фамилия*:</label>
-              <input class="user-data__form-content" type="text" id="appointment-surname" name="surname"
-                placeholder="Пустота" required>
-            </div>
-            <div class="user-data__content-item">
-              <label class="user-data__content-name" for="appointment-patronymic">Отчество:</label>
-              <input class="user-data__form-content" type="text" id="appointment-patronymic" name="patronymic"
-                placeholder="Викторович" required>
-            </div>
-          </fieldset>
-          <fieldset class="feedback__group user-data">
-            <legend class="user-data__title">Контактная информация:</legend>
-            <div class="user-data__content-item">
-              <label class="user-data__content-name" for="appointment-phone">Контактный телефон*:</label>
-              <input class="user-data__form-content user-data__form-content--icon" type="tel" id="appointment-phone"
-                name="phone" placeholder="Введите телефон" required>
-            </div>
-            <div class="user-data__content-item">
-              <label class="user-data__content-name" for="appointment-email">Электронная почта*:</label>
-              <input class="user-data__form-content user-data__form-content--icon" type="email" id="appointment-email"
-                name="phone" placeholder="Введите e-mail" required>
-            </div>
-          </fieldset>
+          <div class="feedback__form-container">
+            <fieldset class="feedback__group user-data user-data--left">
+              <legend class="user-data__title">Представьтесь:</legend>
+              <div class="user-data__content-item">
+                <label class="user-data__content-name" for="appointment-name">Имя*:</label>
+                <input class="user-data__form-content" type="text" id="appointment-name" name="name" placeholder="Петр"
+                  required>
+              </div>
+              <div class="user-data__content-item">
+                <label class="user-data__content-name" for="appointment-surname">Фамилия*:</label>
+                <input class="user-data__form-content" type="text" id="appointment-surname" name="surname"
+                  placeholder="Пустота" required>
+              </div>
+              <div class="user-data__content-item">
+                <label class="user-data__content-name" for="appointment-patronymic">Отчество:</label>
+                <input class="user-data__form-content" type="text" id="appointment-patronymic" name="patronymic"
+                  placeholder="Викторович" required>
+              </div>
+            </fieldset>
+            <fieldset class="feedback__group user-data user-data--right">
+              <legend class="user-data__title">Контактная информация:</legend>
+              <div class="user-data__content-item">
+                <label class="user-data__content-name" for="appointment-phone">Контактный телефон*:</label>
+                <input class="user-data__form-content user-data__form-content--icon" type="tel" id="appointment-phone"
+                  name="phone" placeholder="Введите телефон" required>
+              </div>
+              <div class="user-data__content-item">
+                <label class="user-data__content-name" for="appointment-email">Электронная почта*:</label>
+                <input class="user-data__form-content user-data__form-content--icon" type="email" id="appointment-email"
+                  name="phone" placeholder="Введите e-mail" required>
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="feedback__group user-data user-opinion">
             <legend class="user-opinion__title user-data__title">Ваше общее впечатление:</legend>
             <ul class="user-opinion__list">
@@ -102,7 +104,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__group user-data user-visiting">
-            <legend class="user-visiting__title user-data__title">Посещение достопримечательности:</legend>
+            <legend class="user-visiting__title user-data__title">Посещение</br>достопримечательности:</legend>
             <ul class="user-visiting__list">
               <li class="user-visiting__content-item">
                 <input class="user-visiting__control-input" type="checkbox" name="visiting-place" id="diablo-bridge"
@@ -128,8 +130,10 @@
           </fieldset>
           <fieldset class="feedback__group user-data user-emotions">
             <legend class="user-data__title user-emotions__title">Опишите свои эмоции:</legend>
-            <textarea class="user-emotions__input" rows="4" id="additional-text" name="additional-text" rows="4"
-              placeholder="Опишите подробно все свои восторги"></textarea>
+            <div class="user-emotions__container">
+              <textarea class="user-emotions__input" rows="4" id="additional-text" name="additional-text" rows="4"
+                placeholder="Опишите подробно все свои восторги"></textarea>
+            </div>
             <label class="visually-hidden" for="additional-text">Описание посещения в свободной форме.</label>
           </fieldset>
           <div class="feedback__actions">

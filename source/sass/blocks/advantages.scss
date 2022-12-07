@@ -4,69 +4,112 @@
 }
 
 .advantages__header {
+  max-width: 730px;
+  margin: 0 auto;
   padding-top: 32px;
   padding-bottom: 16px;
 }
 
 .advantages__main-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  margin: 0;
   margin-bottom: 35px;
 }
 
 .advantages__intro {
   margin: 0;
+
   color: $color-night-rider;
 }
 
-
 .advantages__list {
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0;
+
   list-style: none;
+
+  @media (min-width: $vp-tablet) {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .advantages__list-top {
-  text-align: left;
   padding-top: 23px;
   padding-bottom: 46px;
+
+  text-align: left;
 }
 
 .advantages__item {
-  padding: 24px 0;
+  padding: 24px 18px;
+
+  @media (min-width: $vp-tablet) {
+    padding-right: 33px;
+    padding-bottom: 40px;
+    padding-left: 33px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding-top: 52px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 
 .advantages__list-top .advantages__item {
-  padding-left: 47px;
   padding-top: 8px;
+  padding-left: 47px;
+
+  @media (min-width: $vp-tablet) {
+    padding-right: 33px;
+    padding-left: 33px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
 }
 
 .advantages__title {
-  margin: 0;
   margin-bottom: 16px;
-  font-size: 18px;
-  line-height: 26px;
+
+  @media (max-width: calc($vp-tablet - 1px)) {
+    text-align: left;
+  }
 }
 
 .advantages__number {
   display: block;
   margin-bottom: 17px;
+
   color: $color-night-rider;
 }
 
 .advantages__subject {
   margin: 0;
+
   color: $color-night-rider;
+
+  @media (max-width: calc($vp-tablet - 1px)) {
+    text-align: left;
+  }
 }
 
 .advantages__list-bottom {
-  background-color: $color-whisper;
   padding-bottom: 4px;
+
+  background-color: $color-whisper-0;
+}
+
+.advantages__list-bottom .advantages__subject {
+  text-align: center;
 }
 
 .advantages__list-bottom .advantages__item:not(:last-child) {
   border-bottom: 1px solid $color-light-grey;
+
+  @media (min-width: $vp-tablet) {
+    border: none;
+  }
 }

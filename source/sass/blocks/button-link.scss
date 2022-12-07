@@ -1,14 +1,16 @@
 .button-link {
   display: block;
-  color: $color-default-white;
+  width: 100%;
+  padding: 16px;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  padding: 16px;
-  background-color: $color-seagull;
   text-align: center;
+  color: $color-default-white;
   text-transform: uppercase;
+
+  background-color: $color-seagull;
   border: none;
   cursor: pointer;
-  width: 100%;
 }

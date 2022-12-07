@@ -1,0 +1,21 @@
+.title {
+  margin: 0;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-tablet) {
+    font-size: 21px;
+  }
+
+  &--big {
+    font-size: 18px;
+
+    @media (min-width: $vp-tablet) {
+      font-size: 30px;
+    }
+  }
+}

@@ -1,11 +1,46 @@
-.user-opinion__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.user-opinion {
+  @media (min-width: $vp-tablet) {
+    border-top: 1px solid $color-gainsboro;
+  }
 }
 
-.user-opinion__content-item:not(:last-child) {
-  margin-bottom: 16px;
+.user-opinion__title {
+  margin: 0;
+
+  @media (min-width: $vp-tablet) {
+    width: auto;
+    padding: 0 60px;
+  }
+}
+
+.user-opinion__list {
+  display: grid;
+  margin: 0 auto;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 16px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: $vp-tablet) {
+    max-width: 600px;
+    padding: 28px 36px 48px 36px;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $vp-desktop) {
+    max-width: none;
+    padding: 45px 53px 73px 53px;
+
+    gap: 28px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.user-opinion__content-item {
+  width: 280px;
 }
 
 .user-opinion__content-name {

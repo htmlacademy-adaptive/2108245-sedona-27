@@ -1,15 +1,47 @@
+.user-emotions {
+  @media (min-width: $vp-tablet) {
+    padding-bottom: 0;
+
+    border-top: 1px solid $color-gainsboro;
+  }
+}
+
+.user-emotions__title {
+  @media (min-width: $vp-tablet) {
+    width: auto;
+    margin: 0;
+    padding: 0 60px;
+  }
+}
+
+.user-emotions__container {
+  @media (min-width: $vp-tablet) {
+    display: flex;
+    justify-content: center;
+    padding-top: 28px;
+    padding-bottom: 48px;
+  }
+}
+
 .user-emotions__input {
-  resize: none;
-  padding: 16px;
-  border: none;
-  background-color: $color-white-smoke;
   width: 100%;
+  padding: 16px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: $color-default-black;
 
+  background-color: $color-white-smoke;
+  border: none;
+
+  resize: none;
+
   &::placeholder {
     opacity: 0.3;
+  }
+
+  @media (min-width: $vp-desktop) {
+    width: 768px;
   }
 }

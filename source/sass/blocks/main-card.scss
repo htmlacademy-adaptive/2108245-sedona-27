@@ -1,24 +1,40 @@
 .main-card {
   background-color: $color-seagull;
-  color: $color-default-white;
+
+  @media (min-width: $vp-tablet) {
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .main-card__inner {
-  padding-top: 54px;
-  padding-bottom: 40px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 54px 17px 40px 17px;
+
+  color: $color-default-white;
+
+  @media (min-width: $vp-desktop) {
+    max-width: 320px;
+  }
 }
 
 .main-card__title {
-  margin: 0;
+  max-width: 254px;
+  margin: 0 auto;
   margin-bottom: 11px;
+
+  color: $color-default-white;
 }
 
 .main-card__number {
   display: block;
-  margin: 0;
   margin-bottom: 17px;
+
+  color: $color-default-white;
 }
 
 .main-card__subject {
-  margin: 0;
+  color: $color-default-white;
 }
