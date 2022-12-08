@@ -21,11 +21,14 @@
 }
 
 .photo__title {
+  max-width: 458px;
+  margin: 0 auto;
   margin-bottom: 17px;
 }
 
 .photo__text {
-  margin: 0;
+  max-width: 458px;
+  margin: 0 auto;
   margin-bottom: 40px;
 
   text-align: center;

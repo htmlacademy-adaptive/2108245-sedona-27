@@ -1,5 +1,19 @@
+html {
+  height: 100%;
+}
+
 body {
-  margin: 0;
+  display: flex;
+  min-width: $vp-mobile;
+  min-height: 100%;
+
+  font-weight: 400;
+  font-size: $fz-default;
+  line-height: 21px;
+  font-family: $ff-default;
+  color: $color-default-black;
+
+  background-color: $color-white-smoke;
 }
 
 img {

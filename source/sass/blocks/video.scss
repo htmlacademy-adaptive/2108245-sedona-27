@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $vp-desktop) {
-    padding: 66px 199px 64px 199px;
+    padding: 66px 199px 64px 201px;
   }
 }
 
@@ -35,4 +35,11 @@
   @media (min-width: $vp-desktop) {
     margin-bottom: 68px;
   }
+}
+
+.video__player-image {
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
 }
