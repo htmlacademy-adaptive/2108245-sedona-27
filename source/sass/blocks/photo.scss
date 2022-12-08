@@ -2,20 +2,36 @@
   padding-top: 30px;
 }
 
+.photo__wrapper {
+  @media (min-width: $vp-tablet) {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $vp-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.photo__wrapper .photo-item:nth-child(2n) {
+  @media (min-width: $vp-tablet) {
+    background-color: $color-whisper-a;
+  }
+}
+
 .photo__title {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  margin: 0;
+  max-width: 458px;
+  margin: 0 auto;
   margin-bottom: 17px;
 }
 
 .photo__text {
-  text-align: center;
-  text-transform: uppercase;
-  margin: 0;
+  max-width: 458px;
+  margin: 0 auto;
   margin-bottom: 40px;
+
+  text-align: center;
   color: $color-night-rider;
+  text-transform: uppercase;
 }

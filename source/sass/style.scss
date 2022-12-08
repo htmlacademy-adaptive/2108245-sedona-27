@@ -1,28 +1,28 @@
 /*Глобальные стили*/
 
+@import "./global/variables.scss";
 @import "./global/fonts.scss";
 @import "./global/container.scss";
 @import "./global/reboot.scss";
-@import "./global/visually-hidden.scss";
-@import "./global/variables.scss";
+@import "./global/utils.scss";
 
 /*Блоки*/
-@import "./blocks/advantages.scss";
+@import "./blocks/title.scss";
+@import "./blocks/main-text.scss";
 @import "./blocks/button-link.scss";
+@import "./blocks/site-list.scss";
+@import "./blocks/advantages.scss";
 @import "./blocks/feedback.scss";
 @import "./blocks/hotel-search.scss";
 @import "./blocks/main-card.scss";
-@import "./blocks/main-container.scss";
-@import "./blocks/main-footer.scss";
 @import "./blocks/main-header.scss";
 @import "./blocks/main-nav.scss";
 @import "./blocks/map.scss";
-@import "./blocks/page.scss";
+@import "./blocks/wrapper.scss";
 @import "./blocks/photo-item.scss";
 @import "./blocks/photo.scss";
-@import "./blocks/player.scss";
-@import "./blocks/site-list.scss";
 @import "./blocks/social.scss";
+@import "./blocks/main-footer.scss";
 @import "./blocks/user-data.scss";
 @import "./blocks/user-emotion.scss";
 @import "./blocks/user-opinion.scss";

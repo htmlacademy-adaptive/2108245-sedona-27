@@ -1,19 +1,45 @@
 .video {
+  padding-top: 17px;
+
   text-align: center;
   text-transform: uppercase;
-  padding-top: 17px;
+
+  @media (min-width: $vp-tablet) {
+    padding-top: 57px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 66px 199px 64px 201px;
+  }
 }
 
 .video__title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 26px;
-  margin: 0;
   margin-bottom: 20px;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .video__text {
-  color: $color-night-rider;
-  margin: 0;
+  max-width: 450px;
+  margin: 0 auto;
   margin-bottom: 38px;
+
+  color: $color-night-rider;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin-bottom: 68px;
+  }
+}
+
+.video__player-image {
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
 }

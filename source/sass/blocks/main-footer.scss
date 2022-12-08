@@ -1,27 +1,37 @@
 .main-footer {
-  text-align: center;
-  text-transform: uppercase;
-  padding-top: 35px;
-  padding-bottom: 23px;
   display: flex;
   flex-direction: column;
+  padding-top: 35px;
+  padding-bottom: 23px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-tablet) {
+    display: grid;
+
+    gap: 70px;
+    grid-template-columns: 150px 1fr 150px;
+  }
 }
 
 .main-footer__hashtag {
+  margin: 0;
+  margin-bottom: 33px;
+
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin: 0;
-  margin-bottom: 33px;
 }
 
-.main-footer__social.main-footer__social {
-  margin-left: auto;
+.main-footer__social {
   margin-right: auto;
   margin-bottom: 40px;
+  margin-left: auto;
 }
 
 .main-footer__copyright {
   display: block;
+
   color: $color-default-black;
 }

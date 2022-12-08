@@ -1,26 +1,108 @@
 .photo-item {
+  position: relative;
+
   margin: 0;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  border-top: 1px solid $color-whisper-5;
-  border-bottom: 1px solid $color-whisper-5;
+  padding: 24px 0 25px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -18px;
+
+    width: calc(100% + 36px);
+    height: 1px;
+
+    background-color: $color-whisper-5;
+
+    @media (min-width: $vp-tablet) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $vp-tablet) {
+    padding: 0;
+
+    background-color: $color-white-smoke;
+    border: none;
+  }
+
+  &--main {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -18px;
+
+      width: calc(100% + 36px);
+      height: 1px;
+
+      background-color: $color-whisper-5;
+
+      @media (min-width: $vp-tablet) {
+        display: none;
+      }
+    }
+  }
 }
 
 .photo-item__image {
-  background-color: $color-cream-brulee;
+  display: block;
+  width: 100%;
+  max-height: 400px;
   margin-bottom: 15px;
+
+  background-color: $color-cream-brulee;
+
+  object-fit: cover;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 0;
+  }
+}
+
+.photo-item__content {
+  @media (min-width: $vp-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px 15px 15px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    min-height: 80px;
+    padding: 17px 25px;
+
+    color: $color-default-white;
+
+    background-color: $color-black-transparent;
+  }
 }
 
 .photo-item__subtitle {
   margin: 0;
   margin-bottom: 8px;
+
   font-weight: 700;
+  font-size: $fz-default;
+  line-height: 21px;
+  text-transform: uppercase;
 }
 
 .photo-item__author {
   margin: 0;
   margin-bottom: 11px;
+
   color: $color-night-rider;
+
+  @media (min-width: $vp-desktop) {
+    color: $color-default-white;
+  }
 }
 
 .photo-item__likes {
@@ -28,14 +110,22 @@
 }
 
 .photo-item__likes-button {
+  margin: auto 14px auto 0;
+  padding: 0;
+
+  color: $color-black-transparent;
+
   background-color: transparent;
   border: none;
-  padding: 0;
-  margin: auto 14px auto 0;
   cursor: pointer;
+
+  @media (min-width: $vp-desktop) {
+    color: $color-default-white;
+  }
 }
 
 .photo-item__likes-count {
-  font-weight: 700;
   margin: auto 0;
+
+  font-weight: 700;
 }
