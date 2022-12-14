@@ -1,5 +1,13 @@
 .photo {
   padding-top: 30px;
+
+  @media (min-width: $vp-tablet) {
+    padding-top: 66px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 104px 0 0 0;
+  }
 }
 
 .photo__wrapper {
@@ -24,6 +32,10 @@
   max-width: 458px;
   margin: 0 auto;
   margin-bottom: 17px;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 30px;
+  }
 }
 
 .photo__text {
@@ -34,4 +46,10 @@
   text-align: center;
   color: $color-night-rider;
   text-transform: uppercase;
+}
+
+.photo__text br {
+  @media (max-width: calc($vp-tablet - 1px)) {
+    display: none;
+  }
 }

@@ -2,9 +2,10 @@
   background-color: $color-reef;
 }
 
-.map__image {
-  width: 100%;
+.map__iframe iframe {
   display: block;
-  object-fit: cover;
+  width: 100%;
   max-height: 350px;
+
+  object-fit: cover;
 }
