@@ -11,7 +11,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 4;
+  z-index: 5;
 
   display: block;
   width: 60px;
@@ -32,22 +32,6 @@
   &:active,
   &:focus {
     opacity: 0.6;
-  }
-}
-
-.main-nav--nojs {
-  & .main-nav__toggle {
-    display: none;
-  }
-
-  & .main-nav__list {
-    position: static;
-
-    margin-top: 96px;
-
-    @media (min-width: $vp-tablet) {
-      margin-top: 0;
-    }
   }
 }
 
@@ -76,11 +60,11 @@
 
 .main-nav--opened {
   & .main-nav__toggle {
-    top: 17px;
-    right: 20px;
+    top: 0;
+    right: 0;
 
-    width: 22px;
-    height: 22px;
+    width: 60px;
+    height: 60px;
 
     background-color: transparent;
 
@@ -88,8 +72,8 @@
     &::after {
       content: "";
       position: absolute;
-      top: 9px;
-      left: -4px;
+      top: 25px;
+      left: 14px;
 
       width: 31px;
       height: 4px;
@@ -117,6 +101,23 @@
 
     @media (min-width: $vp-tablet) {
       display: grid;
+    }
+  }
+}
+
+.main-nav--nojs {
+  & .main-nav__toggle {
+    display: none;
+  }
+
+  & .main-nav__list {
+    position: static;
+
+    display: block;
+    margin-top: 96px;
+
+    @media (min-width: $vp-tablet) {
+      margin-top: 0;
     }
   }
 }
