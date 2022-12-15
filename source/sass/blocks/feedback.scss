@@ -37,6 +37,12 @@
   }
 }
 
+.feedback__intro br {
+  @media (max-width: calc($vp-tablet - 1px)) {
+    display: none;
+  }
+}
+
 .feedback__form-container {
   @media (min-width: $vp-tablet) {
     display: grid;

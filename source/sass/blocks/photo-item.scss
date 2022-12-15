@@ -92,6 +92,10 @@
   font-size: $fz-default;
   line-height: 21px;
   text-transform: uppercase;
+
+  @media (min-width: $vp-desktop) {
+    margin-bottom: 4px;
+  }
 }
 
 .photo-item__author {
@@ -101,6 +105,8 @@
   color: $color-night-rider;
 
   @media (min-width: $vp-desktop) {
+    margin-bottom: 0;
+
     color: $color-default-white;
   }
 }
@@ -121,6 +127,21 @@
 
   @media (min-width: $vp-desktop) {
     color: $color-default-white;
+  }
+
+  &:hover {
+    color: $color-seagull;
+  }
+
+  &:active,
+  &:focus {
+    color: $color-shakespeare-549;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    pointer-events: none;
   }
 }
 

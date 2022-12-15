@@ -10,8 +10,54 @@
 }
 
 .social__item {
+  display: flex;
+}
+
+.social__link {
+  position: relative;
+
+  display: block;
   width: 48px;
   height: 48px;
+  padding: 12px;
 
   background-color: $color-seagull;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    width: 36px;
+    height: 36px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--vk::before {
+    background-image: url("../images/svg/vk.svg");
+  }
+
+  &--telegram::before {
+    background-image: url("../images/svg/telegram.svg");
+  }
+
+  &--youtube::before {
+    background-image: url("../images/svg/youtube.svg");
+  }
+
+  &:hover {
+    background-color: $color-shakespeare-669;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $color-shakespeare-549;
+    outline: none;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
 }

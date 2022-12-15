@@ -37,6 +37,44 @@
   }
 }
 
+.video__player {
+  position: relative;
+}
+
+.video__player-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 48px;
+  height: 54px;
+
+  background-color: $color-default-white;
+  border: none;
+  transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
+  opacity: 0.7;
+
+  transition: opacity 0.5s;
+
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.1;
+
+    pointer-events: none;
+  }
+}
+
 .video__player-image {
   display: block;
   width: 100%;

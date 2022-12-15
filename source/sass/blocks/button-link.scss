@@ -13,4 +13,22 @@
   background-color: $color-seagull;
   border: none;
   cursor: pointer;
+
+  &:hover {
+    background-color: $color-shakespeare-669;
+  }
+
+  &:active,
+  &:focus {
+    color: $color-white-transparent;
+
+    background-color: $color-shakespeare-549;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-whisper-5;
+
+    pointer-events: none;
+  }
 }

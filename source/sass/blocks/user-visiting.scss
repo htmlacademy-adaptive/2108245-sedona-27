@@ -6,6 +6,7 @@
 
 .user-visiting__title {
   margin: 0;
+  margin-bottom: 20px;
 
   @media (min-width: $vp-tablet) {
     width: auto;
@@ -32,16 +33,75 @@
   }
 
   @media (min-width: $vp-desktop) {
+    display: flex;
+    flex-wrap: wrap;
     max-width: none;
     padding: 59px 44px 56px 45px;
 
-    gap: 64px;
-    grid-template-columns: repeat(4, 1fr);
+    gap: 63px;
+  }
+}
+
+.user-visiting__control-label {
+  position: relative;
+
+  display: inline-block;
+  min-height: 46px;
+  padding-left: 62px;
+
+  cursor: pointer;
+
+  &:hover {
+    & .user-visiting__control-checkbox {
+      background-color: $color-whisper-5;
+    }
+  }
+
+  &:active,
+  &:focus {
+    & .user-visiting__control-checkbox {
+      background-color: $color-light-grey-6;
+      outline: none;
+    }
   }
 }
 
 .user-visiting__content-name {
+  display: block;
+  padding: 10px 0;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+}
+
+.user-visiting__control-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 46px;
+  height: 46px;
+
+  background-color: $color-white-smoke;
+}
+
+.user-visiting__control-input:checked + .user-visiting__control-checkbox {
+  background-image: url("../images/svg/tick.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.user-visiting__control-input:disabled ~ .user-visiting__control-checkbox,
+.user-visiting__control-input:disabled ~ .user-visiting__content-name {
+  opacity: 0.3;
+
+  pointer-events: none;
+}
+
+.user-visiting__control-label:active .user-visiting__control-input:checked + .user-visiting__control-checkbox,
+.user-visiting__control-label:focus .user-visiting__control-input:checked + .user-visiting__control-checkbox {
+  background-image: url("../images/svg/tick-active.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }

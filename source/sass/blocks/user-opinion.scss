@@ -6,6 +6,7 @@
 
 .user-opinion__title {
   margin: 0;
+  margin-bottom: 20px;
 
   @media (min-width: $vp-tablet) {
     width: auto;
@@ -43,8 +44,68 @@
   width: 280px;
 }
 
+.user-opinion__control-label {
+  position: relative;
+
+  display: inline-block;
+  min-height: 46px;
+  padding-left: 62px;
+
+  cursor: pointer;
+
+  &:hover {
+    & .user-opinion__control-radio {
+      background-color: $color-whisper-5;
+    }
+  }
+
+  &:active,
+  &:focus {
+    & .user-opinion__control-radio {
+      background-color: $color-light-grey-6;
+      outline: none;
+    }
+  }
+}
+
 .user-opinion__content-name {
+  display: block;
+  padding: 10px 0;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
+}
+
+.user-opinion__control-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 46px;
+  height: 46px;
+
+  background-color: $color-white-smoke;
+  border-radius: 50%;
+}
+
+.user-opinion__control-input:checked + .user-opinion__control-radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: $color-night-rider;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.user-opinion__control-input:disabled ~ .user-opinion__control-radio,
+.user-opinion__control-input:disabled ~ .user-opinion__content-name {
+  opacity: 0.3;
+
+  pointer-events: none;
 }

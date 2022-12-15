@@ -43,4 +43,21 @@
   @media (min-width: $vp-desktop) {
     width: 768px;
   }
+
+  &:hover {
+    background-color: $color-whisper-5;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $color-default-white;
+    border: 4px solid $color-whisper-5;
+    padding: 12px;
+    outline: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
 }

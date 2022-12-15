@@ -1,30 +1,78 @@
 .welcome {
+  position: relative;
+
   padding-top: 90px;
-  padding-bottom: 79px;
+  padding-bottom: 85px;
 
   text-align: center;
 
   background-color: $color-pattens-blue;
   background-image: url("../images/welcome-background.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 25%;
 
   clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
 
   @media (min-width: $vp-tablet) {
     min-height: 518px;
+    padding-top: 77px;
+    padding-bottom: 91px;
+
+    background-position: 50% 50%;
 
     clip-path: none;
   }
 
-  &--inner {
-    padding: 57px 0 60px 0;
+  @media (min-width: $vp-desktop) {
+    min-height: 518px;
+    padding-top: 77px;
+    padding-bottom: 91px;
 
-    background-size: auto;
+    clip-path: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+
+    display: none;
+    width: 100%;
+    height: 57px;
+
+    background-image: url("../images/svg/collar.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @media (min-width: $vp-tablet) {
+      display: block;
+    }
+
+    @media (min-width: $vp-tablet) {
+      display: block;
+    }
+  }
+
+  &--inner {
+    padding: 52px 45px 67px 45px;
+
+    background-position: 50% 100%;
+
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
 
     @media (min-width: $vp-tablet) {
       min-height: 301px;
       padding-top: 101px;
+
+      clip-path: none;
     }
   }
+}
+
+.welcome__image {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
 }
