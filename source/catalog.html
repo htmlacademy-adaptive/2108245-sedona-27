@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/favicon-180.png">
+  <link rel="manifest" href="sedona.webmanifest">
   <title>Фото и видео городка Седона</title>
 </head>
 
@@ -48,7 +52,11 @@
         <p class="photo__text">Не&nbsp;можете&nbsp;решиться&nbsp;на&nbsp;путешествие из-за курса? <br>Фотографии помогут
           вам забыть о&nbsp;политике и&nbsp;экономике.</p>
         <figure class="photo-item photo-item--main">
-          <img class="photo-item__image" src="images/photo-1.jpg" width="280" height="280" alt="Дорога на фоне заката.">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="images/photo-1-desktop@1x.jpg 1x, images/photo-1-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="images/photo-1-tablet@1x.jpg 1x, images/photo-1-tablet@2x.jpg 2x">
+            <img class="photo-item__image" src="images/photo-1-mobile@1x.jpg" srcset="images/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на фоне заката." />
+          </picture>
           <figcaption class="photo-item__content">
             <div class="photo-item__content-inner">
               <h3 class="photo-item__subtitle">Неродные просторы</h3>
@@ -70,8 +78,11 @@
         </figure>
         <div class="photo__wrapper">
           <figure class="photo-item">
-            <img class="photo-item__image" src="images/photo-2.jpg" width="280" height="280"
-              alt="Ветки местного дерева на фоне гор.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/photo-2-desktop@1x.jpg 1x, images/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/photo-2-tablet@1x.jpg 1x, images/photo-2-tablet@2x.jpg 2x">
+              <img class="photo-item__image" src="images/photo-2-mobile@1x.jpg" srcset="images/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Ветки местного дерева на фоне гор." />
+            </picture>
             <figcaption class="photo-item__content">
               <div class="photo-item__content-inner">
                 <h3 class="photo-item__subtitle">Местная растительность</h3>
@@ -92,7 +103,11 @@
             </figcaption>
           </figure>
           <figure class="photo__item photo-item">
-            <img class="photo-item__image" src="images/photo-3.jpg" width="280" height="280" alt="Серпантин в лесу.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/photo-3-desktop@1x.jpg 1x, images/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/photo-3-tablet@1x.jpg 1x, images/photo-3-tablet@2x.jpg 2x">
+              <img class="photo-item__image" src="images/photo-3-mobile@1x.jpg" srcset="images/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Серпантин в лесу." />
+            </picture>
             <figcaption class="photo-item__content">
               <div class="photo-item__content-inner">
                 <h3 class="photo-item__subtitle">Дорога на север</h3>
@@ -113,7 +128,11 @@
             </figcaption>
           </figure>
           <figure class="photo__item photo-item">
-            <img class="photo-item__image" src="images/photo-4.jpg" width="280" height="280" alt="Горы.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/photo-4-desktop@1x.jpg 1x, images/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/photo-4-tablet@1x.jpg 1x, images/photo-4-tablet@2x.jpg 2x">
+              <img class="photo-item__image" src="images/photo-4-mobile@1x.jpg" srcset="images/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Горы." />
+            </picture>
             <figcaption class="photo-item__content">
               <div class="photo-item__content-inner">
                 <h3 class="photo-item__subtitle">Мост Дьявола</h3>
@@ -142,7 +161,11 @@
           подорожали&nbsp;в&nbsp;очередной раз!
         </p>
         <div class="video__player">
-          <img class="video__player-image" src="images/video-mobile.jpg" width="280" height="117" alt="Превью видео.">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="images/video-desktop@1x.jpg 1x, images/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="images/video-tablet@1x.jpg 1x, images/video-tablet@2x.jpg 2x">
+            <img class="video__player-image" src="images/video-mobile@1x.jpg" srcset="images/video-mobile@2x.jpg 2x" width="280" height="117" alt="Превью видео." />
+          </picture>
           <button class="video__player-button" type="button">
             <span class="visually-hidden">Начать просмотр видезаписи.</span>
           </button>

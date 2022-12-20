@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/favicon-180.png">
+  <link rel="manifest" href="sedona.webmanifest">
   <title>Седона</title>
 </head>
 
@@ -61,8 +65,14 @@
               Седона не&nbsp;аттракцион для туристов, там&nbsp;течёт&nbsp;своя жизнь
             </p>
           </div>
-          <img class="main-card__image" src="images/city-view.jpg" alt="Красивый пример городка." width="320"
-            height="260" />
+          <div class="main-card__image-container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/city-view-desktop@1x.jpg 1x, images/city-view-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/city-view-tablet@1x.jpg 1x, images/city-view-tablet@2x.jpg 2x">
+              <img class="main-card__image" src="images/city-view-mobile@1x.jpg" srcset="images/city-view-mobile@2x.jpg 2x" alt="Красивый пример городка." width="320"
+              height="260" />
+            </picture>
+          </div>
         </div>
         <ul class="advantages__list advantages__list-top">
           <li class="advantages__item advantages__item--hotel">
@@ -92,8 +102,14 @@
               Да, по&nbsp;нему можно пройти! Если&nbsp;вы осмелитесь, конечно
             </p>
           </div>
-          <img class="main-card__image  main-card__image--first" src="images/devil-bridge.jpg" alt="Горы." width="320"
-            height="260" />
+          <div class="main-card__image-container main-card__image-container--image-first">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/devil-bridge-desktop@1x.jpg 1x, images/devil-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/devil-bridge-tablet@1x.jpg 1x, images/devil-bridge-tablet@2x.jpg 2x">
+              <img class="main-card__image" src="images/devil-bridge-mobile@1x.jpg" srcset="images/devil-bridge-mobile@2x.jpg 2x" alt="Горы." width="320"
+              height="260" />
+            </picture>
+          </div>
         </div>
         <ul class="advantages__list advantages__list-bottom">
           <li class="advantages__item">
