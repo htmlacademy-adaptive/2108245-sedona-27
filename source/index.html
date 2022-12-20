@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/favicons/favicon-180.png">
+  <link rel="manifest" href="sedona.webmanifest">
   <title>Седона</title>
 </head>
 
@@ -61,8 +65,14 @@
               Седона не&nbsp;аттракцион для туристов, там&nbsp;течёт&nbsp;своя жизнь
             </p>
           </div>
-          <img class="main-card__image" src="images/city-view.jpg" alt="Красивый пример городка." width="320"
-            height="260" />
+          <div class="main-card__image-container">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/city-view-desktop@1x.jpg 1x, images/city-view-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/city-view-tablet@1x.jpg 1x, images/city-view-tablet@2x.jpg 2x">
+              <img class="main-card__image" src="images/city-view-mobile@1x.jpg" srcset="images/city-view-mobile@2x.jpg 2x" alt="Красивый пример городка." width="320"
+              height="260" />
+            </picture>
+          </div>
         </div>
         <ul class="advantages__list advantages__list-top">
           <li class="advantages__item advantages__item--hotel">
@@ -92,8 +102,14 @@
               Да, по&nbsp;нему можно пройти! Если&nbsp;вы осмелитесь, конечно
             </p>
           </div>
-          <img class="main-card__image  main-card__image--first" src="images/devil-bridge.jpg" alt="Горы." width="320"
-            height="260" />
+          <div class="main-card__image-container main-card__image-container--image-first">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="images/devil-bridge-desktop@1x.jpg 1x, images/devil-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="images/devil-bridge-tablet@1x.jpg 1x, images/devil-bridge-tablet@2x.jpg 2x">
+              <img class="main-card__image" src="images/devil-bridge-mobile@1x.jpg" srcset="images/devil-bridge-mobile@2x.jpg 2x" alt="Горы." width="320"
+              height="260" />
+            </picture>
+          </div>
         </div>
         <ul class="advantages__list advantages__list-bottom">
           <li class="advantages__item">
@@ -131,12 +147,18 @@
       </div>
       <section class="map">
         <h2 class="visually-hidden">Как нас найти.</h2>
-        <div class="map__iframe">
-          <iframe
+        <div class="map__image-container">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
+            <img class="map__image" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" alt="Карта расположения седоны." width="320"
+            height="350" />
+          </picture>
+          <iframe class="map__iframe"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838891.9107913168!2d-112.41226706392109!3d34.78275078496052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1670946712790!5m2!1sru!2sru"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            width="600" height="450" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+          </div>
       </section>
     </main>
     <footer class="main-footer container">
