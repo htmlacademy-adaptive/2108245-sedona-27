@@ -37,9 +37,9 @@
     padding-top: 77px;
     padding-bottom: 91px;
 
-    clip-path: none;
-
     background-image: url("../images/welcome-background-desktop@1x.jpg");
+
+    clip-path: none;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../images/welcome-background-desktop@2x.jpg");
@@ -72,15 +72,33 @@
   &--inner {
     padding: 52px 45px 67px 45px;
 
-    background-position: 50% 100%;
+    background-image: url("../images/welcome-inner-mobile@1x.jpg");
 
     clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../images/welcome-inner-mobile@2x.jpg");
+    }
 
     @media (min-width: $vp-tablet) {
       min-height: 301px;
       padding-top: 101px;
 
+      background-image: url("../images/welcome-inner-tablet@1x.jpg");
+
       clip-path: none;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../images/welcome-inner-tablet@2x.jpg");
+      }
+    }
+
+    @media (min-width: $vp-desktop) {
+      background-image: url("../images/welcome-inner-desktop@1x.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../images/welcome-inner-desktop@2x.jpg");
+      }
     }
   }
 }
