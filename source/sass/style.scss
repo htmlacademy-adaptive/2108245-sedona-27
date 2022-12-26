@@ -6,7 +6,7 @@
 @import "./global/reboot.scss";
 @import "./global/utils.scss";
 
-/*Блоки*/
+/*Блоки страниц*/
 @import "./blocks/title.scss";
 @import "./blocks/main-text.scss";
 @import "./blocks/button-link.scss";
@@ -29,3 +29,6 @@
 @import "./blocks/user-visiting.scss";
 @import "./blocks/video.scss";
 @import "./blocks/welcome.scss";
+
+/*Модалки*/
+@import "./blocks/modal.scss";
