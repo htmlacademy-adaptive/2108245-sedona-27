@@ -10,6 +10,8 @@
   <link rel="icon" href="images/svg/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/favicon-180.png">
   <link rel="manifest" href="sedona.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <title>Страница отзыва на отель Седоны</title>
 </head>
 
@@ -44,17 +46,16 @@
       </nav>
     </header>
     <main class="main-container">
-      <section class="welcome welcome--inner container">
+      <section class="welcome welcome--form-inner container">
         <h1 class="visually-hidden">Форма обратной связи.</h1>
-        <img class="welcome__inner" src="images/svg/welcome-inner.svg"
+        <img class="welcome__image" src="images/svg/welcome-inner.svg"
           alt="Добро пожаловать в великолепный городок Седоны. Потому что гранд-Каньон - отстой!" width="282"
           height="214" />
       </section>
       <section class="feedback container">
         <header class="feedback__header">
           <h2 class="feedback__main-title title title--big">Оставьте свой отзыв</h2>
-          <p class="feedback__intro main-text">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них,
-            <br>а&nbsp;также о&nbsp;посещенных вами достопримечательностях</p>
+          <p class="feedback__intro main-text">Помогите нашим отелям стать лучше! Оставьте отзыв о&nbsp;них,&nbsp;<br>а&nbsp;также о посещенных вами достопримечательностях</p>
         </header>
         <form class="feedback__form" method="POST" action="https://echo.htmlacademy.ru">
           <div class="feedback__form-container">
@@ -96,9 +97,9 @@
               <li class="user-opinion__content-item">
                 <label class="user-opinion__control-label">
                   <input class="visually-hidden user-opinion__control-input" type="radio" id="good-opinion"
-                    name="user-opinion" value="Скорее положительные" checked>
+                    name="user-opinion" value="Скорее положительное" checked>
                   <span class="user-opinion__control-radio"></span>
-                  <span class="user-opinion__content-name">Скорее положительные</span></label>
+                  <span class="user-opinion__content-name">Скорее положительное</span></label>
               </li>
               <li class="user-opinion__content-item">
                 <label class="user-opinion__control-label">
@@ -117,7 +118,7 @@
             </ul>
           </fieldset>
           <fieldset class="feedback__group user-data user-visiting">
-            <legend class="user-visiting__title user-data__title">Посещение</br>достопримечательности:</legend>
+            <legend class="user-visiting__title user-data__title">Посещенные</br>достопримечательности:</legend>
             <ul class="user-visiting__list">
               <li class="user-visiting__content-item">
                 <label class="user-visiting__control-label">
@@ -152,7 +153,7 @@
           <fieldset class="feedback__group user-data user-emotions">
             <legend class="user-data__title user-emotions__title">Опишите свои эмоции:</legend>
             <div class="user-emotions__container">
-              <textarea class="user-emotions__input" rows="4" id="additional-text" name="additional-text" rows="4"
+              <textarea class="user-emotions__input" rows="5" id="additional-text" name="additional-text" rows="4"
                 placeholder="Опишите подробно все свои восторги"></textarea>
             </div>
             <label class="visually-hidden" for="additional-text">Описание посещения в свободной форме.</label>
@@ -164,7 +165,7 @@
         </form>
       </section>
     </main>
-    <footer class="main-footer container">
+    <footer class="main-footer main-footer--photo container">
       <p class="main-footer__hashtag">#visitsedona</p>
       <ul class="main-footer__social social">
         <li class="social__item">
@@ -191,7 +192,9 @@
       </a>
     </footer>
   </div>
+  <!-- Добавить класс modal__is-open к modal, чтобы показать модальное окно -->
   <div class="modal">
+    <!-- На контейнере: -->
     <!--modal__container--is-valid  - для успешного сообщения-->
     <!--modal__container--is-error  - в случае ошибки-->
     <div class="modal__container modal__container--is-error">

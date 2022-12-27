@@ -5,12 +5,18 @@
   padding: 0 18px;
 
   @media (min-width: $vp-tablet) {
-    /*min-width: $vp-tablet;*/
     padding: 0 60px;
   }
 
   @media (min-width: $vp-desktop) {
-    /*min-width: $vp-desktop;*/
     padding: 0 120px;
+  }
+
+  &--photo {
+    padding: 0 20px;
+
+    @media (min-width: $vp-tablet) {
+      padding: 0 60px;
+    }
   }
 }

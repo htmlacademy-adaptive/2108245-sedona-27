@@ -1,22 +1,24 @@
-.user-data--left {
+.user-data--left .user-data__content-item {
   @media (min-width: $vp-tablet) {
-    padding-right: 44px;
-
-    border-right: 1px solid $color-gainsboro;
+    padding-right: 42px;
   }
 
   @media (min-width: $vp-desktop) {
-    padding-right: 64px;
+    padding-right: 48px;
   }
 }
 
 .user-data--right {
+  padding-bottom: 34px;
+}
+
+.user-data--right .user-data__content-item {
   @media (min-width: $vp-tablet) {
-    padding-left: 26px;
+    padding-left: 42px;
   }
 
   @media (min-width: $vp-desktop) {
-    padding-left: 64px;
+    padding-left: 76px;
   }
 }
 
@@ -55,32 +57,36 @@
 
     font-size: 21px;
   }
+
+  @media (min-width: $vp-desktop) {
+    padding-left: 15px;
+  }
+}
+
+.user-data--right .user-data__title {
+  margin-bottom: 19px;
+  padding-top: 26px;
+
+  @media (min-width: $vp-tablet) {
+    margin-bottom: 26px;
+  }
 }
 
 .user-data__content-item {
+  position: relative;
+
   display: flex;
   flex-direction: column;
-  position: relative;
 
   &:not(:last-child) {
     margin-bottom: 16px;
   }
 
-  &--icon {
-    @media (min-width: $vp-tablet) {
-      padding-left: 18px;
-    }
-
-    @media (min-width: $vp-desktop) {
-      padding-left: 0;
-    }
-  }
-
   &--icon::after {
     content: "";
     position: absolute;
-    bottom: 0;
     right: 0;
+    bottom: 0;
 
     width: 58px;
     height: 58px;
@@ -107,8 +113,9 @@
 }
 
 .user-data__form-content {
-  padding: 16px;
+  padding: 17px 16px 15px 15px;
 
+  font: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
@@ -127,19 +134,21 @@
 
   &:active,
   &:focus {
+    padding: 12px;
+
     background-color: $color-default-white;
     border: 4px solid $color-whisper-5;
-    padding: 12px;
     outline: none;
   }
 
   &:disabled {
-    pointer-events: none;
     opacity: 0.3;
+
+    pointer-events: none;
   }
 }
 
 .user-data__content-item--icon .user-data__form-content {
-  padding-right: 74px;
   width: 100%;
+  padding-right: 74px;
 }

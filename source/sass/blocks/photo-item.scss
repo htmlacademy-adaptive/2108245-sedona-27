@@ -2,7 +2,7 @@
   position: relative;
 
   margin: 0;
-  padding: 24px 0 25px 0;
+  padding: 25px 0 27px 0;
 
   &::after {
     content: "";
@@ -66,7 +66,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 20px 15px 15px;
+    padding: 22px 20px 4px 20px;
   }
 
   @media (min-width: $vp-desktop) {
@@ -76,26 +76,28 @@
 
     width: 100%;
     min-height: 80px;
-    padding: 17px 25px;
+    padding: 22px 25px 12px 21px;
 
     color: $color-default-white;
 
     background-color: $color-black-transparent;
   }
+
+  &--small {
+    @media (min-width: $vp-desktop) {
+      padding: 19px 25px 12px 25px;
+    }
+  }
 }
 
 .photo-item__subtitle {
   margin: 0;
-  margin-bottom: 8px;
+  margin-bottom: 1px;
 
   font-weight: 700;
   font-size: $fz-default;
   line-height: 21px;
   text-transform: uppercase;
-
-  @media (min-width: $vp-desktop) {
-    margin-bottom: 4px;
-  }
 }
 
 .photo-item__author {
@@ -113,6 +115,14 @@
 
 .photo-item__likes {
   display: flex;
+
+  @media (min-width: $vp-tablet) {
+    transform: translateY(-7px);
+  }
+
+  @media (min-width: $vp-desktop) {
+    transform: translate(5px, -5px);
+  }
 }
 
 .photo-item__likes-button {
@@ -124,6 +134,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $vp-tablet) {
+    margin-right: 9px;
+  }
 
   @media (min-width: $vp-desktop) {
     color: $color-default-white;

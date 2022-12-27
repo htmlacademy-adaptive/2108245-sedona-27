@@ -70,7 +70,7 @@
   display: inline-flex;
   justify-content: center;
   width: 100%;
-  padding: 17px 50px 12px 50px;
+  padding: 17px 50px 11px 50px;
 
   font-weight: 700;
   font-size: 18px;
@@ -113,6 +113,8 @@
 }
 
 .site-list__item--current .site-list__link {
+  color: $color-white-transparent;
+
   &:hover,
   &:active,
   &:focus {
@@ -120,8 +122,6 @@
 
     background: transparent;
   }
-
-  color: $color-white-transparent;
 
   @media (min-width: $vp-tablet) {
     color: $color-roman-coffee;

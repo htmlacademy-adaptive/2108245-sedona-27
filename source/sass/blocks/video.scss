@@ -1,23 +1,24 @@
 .video {
-  padding-top: 17px;
+  padding-top: 18px;
 
   text-align: center;
   text-transform: uppercase;
 
   @media (min-width: $vp-tablet) {
-    padding-top: 57px;
+    padding-top: 56px;
+    padding-bottom: 50px;
   }
 
   @media (min-width: $vp-desktop) {
-    padding: 66px 199px 64px 201px;
+    padding: 60px 201px 94px 199px;
   }
 }
 
 .video__title {
-  margin-bottom: 20px;
+  margin-bottom: 27px;
 
   @media (min-width: $vp-tablet) {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
 
@@ -29,11 +30,11 @@
   color: $color-night-rider;
 
   @media (min-width: $vp-tablet) {
-    margin-bottom: 65px;
+    margin-bottom: 89px;
   }
 
   @media (min-width: $vp-desktop) {
-    margin-bottom: 68px;
+    margin-bottom: 87px;
   }
 }
 

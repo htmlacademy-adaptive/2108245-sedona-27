@@ -10,6 +10,8 @@
   <link rel="icon" href="images/svg/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="images/favicons/favicon-180.png">
   <link rel="manifest" href="sedona.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <title>Фото и видео городка Седона</title>
 </head>
 
@@ -44,13 +46,13 @@
       </nav>
     </header>
     <main class="main-container">
-      <section class="welcome welcome--inner container">
+      <section class="welcome welcome--inner container--photo">
         <h1 class="visually-hidden">Фото и видео городка Седона.</h1>
         <img class="welcome__image" src="images/svg/welcome-inner.svg"
           alt="Добро пожаловать в великолепный городок Седоны. Потому что гранд-Каньон - отстой!" width="282"
           height="214" />
       </section>
-      <section class="photo container">
+      <section class="photo container--photo">
         <h2 class="photo__title title title--big">Фото и видео</h2>
         <p class="photo__text">Не&nbsp;можете&nbsp;решиться&nbsp;на&nbsp;путешествие из-за курса? <br>Фотографии помогут
           вам забыть о&nbsp;политике и&nbsp;экономике.</p>
@@ -89,7 +91,7 @@
               <source media="(min-width: 768px)" srcset="images/photo-2-tablet@1x.jpg 1x, images/photo-2-tablet@2x.jpg 2x">
               <img class="photo-item__image" src="images/photo-2-mobile@1x.jpg" srcset="images/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Ветки местного дерева на фоне гор." />
             </picture>
-            <figcaption class="photo-item__content">
+            <figcaption class="photo-item__content photo-item__content--small">
               <div class="photo-item__content-inner">
                 <h3 class="photo-item__subtitle">Местная растительность</h3>
                 <p class="photo-item__author">Автор фото: Сергей</p>
@@ -114,7 +116,7 @@
               <source media="(min-width: 768px)" srcset="images/photo-3-tablet@1x.jpg 1x, images/photo-3-tablet@2x.jpg 2x">
               <img class="photo-item__image" src="images/photo-3-mobile@1x.jpg" srcset="images/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Серпантин в лесу." />
             </picture>
-            <figcaption class="photo-item__content">
+            <figcaption class="photo-item__content  photo-item__content--small">
               <div class="photo-item__content-inner">
                 <h3 class="photo-item__subtitle">Дорога на север</h3>
                 <p class="photo-item__author">Автор фото: Петр</p>
@@ -139,7 +141,7 @@
               <source media="(min-width: 768px)" srcset="images/photo-4-tablet@1x.jpg 1x, images/photo-4-tablet@2x.jpg 2x">
               <img class="photo-item__image" src="images/photo-4-mobile@1x.jpg" srcset="images/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Горы." />
             </picture>
-            <figcaption class="photo-item__content">
+            <figcaption class="photo-item__content  photo-item__content--small">
               <div class="photo-item__content-inner">
                 <h3 class="photo-item__subtitle">Мост Дьявола</h3>
                 <p class="photo-item__author">Автор фото: Антон</p>
@@ -157,7 +159,7 @@
           </figure>
         </div>
       </section>
-      <section class="video container">
+      <section class="video container--photo">
         <h2 class="visually-hidden">Видео-материалы о Седоне.</h2>
         <p class="video__title title title--big">Все еще сомневаетесь?</p>
         <p class="video__text">Смотрите видеопрезентацию и скорее&nbsp;за&nbsp;билетами, пока они не
@@ -178,7 +180,7 @@
         </div>
       </section>
     </main>
-    <footer class="main-footer container">
+    <footer class="main-footer main-footer--photo container">
       <p class="main-footer__hashtag">#visitsedona</p>
       <ul class="main-footer__social social">
         <li class="social__item">
