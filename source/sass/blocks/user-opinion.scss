@@ -1,4 +1,10 @@
 .user-opinion {
+  padding-bottom: 23px;
+
+  @media (min-width: $vp-tablet) {
+    border-top: 1px solid $color-gainsboro;
+  }
+
   @media (min-width: $vp-tablet) {
     border-top: 1px solid $color-gainsboro;
   }
@@ -7,10 +13,15 @@
 .user-opinion__title {
   margin: 0;
   margin-bottom: 20px;
+  padding-top: 26px;
 
   @media (min-width: $vp-tablet) {
     width: auto;
     padding: 0 60px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    padding: 0 64px;
   }
 }
 
@@ -26,14 +37,14 @@
 
   @media (min-width: $vp-tablet) {
     max-width: 600px;
-    padding: 28px 36px 48px 36px;
+    padding: 8px 12px 24px 12px;
 
     grid-template-columns: repeat(2, 1fr);
   }
 
   @media (min-width: $vp-desktop) {
     max-width: none;
-    padding: 45px 53px 73px 53px;
+    padding: 23px 9px 50px 51px;
 
     gap: 28px;
     grid-template-columns: repeat(3, 1fr);

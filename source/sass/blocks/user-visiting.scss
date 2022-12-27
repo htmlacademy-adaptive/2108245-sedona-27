@@ -1,4 +1,6 @@
 .user-visiting {
+  padding-bottom: 23px;
+
   @media (min-width: $vp-tablet) {
     border-top: 1px solid $color-gainsboro;
   }
@@ -7,10 +9,16 @@
 .user-visiting__title {
   margin: 0;
   margin-bottom: 20px;
+  padding-top: 26px;
 
   @media (min-width: $vp-tablet) {
     width: auto;
-    padding: 0 60px;
+    padding: 0 74px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    width: auto;
+    padding: 0 63px;
   }
 }
 
@@ -27,7 +35,9 @@
   @media (min-width: $vp-tablet) {
     max-width: 480px;
     margin: 0 auto;
-    padding: 28px 0 42px 0;
+    padding: 10px 0 18px 0;
+
+    column-gap: 32px;
 
     grid-template-columns: repeat(2, 1fr);
   }
@@ -36,7 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     max-width: none;
-    padding: 59px 44px 56px 45px;
+    padding: 41px 44px 64px 45px;
 
     gap: 63px;
   }
@@ -89,7 +99,7 @@
 .user-visiting__control-input:checked + .user-visiting__control-checkbox {
   background-image: url("../images/svg/tick.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 50% 47%;
 }
 
 .user-visiting__control-input:disabled ~ .user-visiting__control-checkbox,

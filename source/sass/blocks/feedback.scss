@@ -1,15 +1,14 @@
 .feedback {
-  padding-top: 36px;
-  padding-bottom: 24px;
+  padding-top: 37px;
+  padding-bottom: 27px;
 
   @media (min-width: $vp-tablet) {
     padding-top: 64px;
-    padding-bottom: 64px;
+    padding-bottom: 74px;
   }
 
   @media (min-width: $vp-desktop) {
-    padding-right: 120px;
-    padding-left: 120px;
+    padding: 113px 120px 74px 120px;
   }
 }
 
@@ -19,21 +18,31 @@
 }
 
 .feedback__main-title {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   @media (min-width: $vp-tablet) {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin-bottom: 30px;
   }
 }
 
 .feedback__intro {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 
   color: $color-night-rider;
 
   @media (min-width: $vp-tablet) {
-    margin-bottom: 102px;
+    margin-bottom: 76px;
+
+    line-height: 24px;
+  }
+
+  @media (min-width: $vp-desktop) {
+    margin-bottom: 42px;
   }
 }
 
@@ -45,14 +54,32 @@
 
 .feedback__form-container {
   @media (min-width: $vp-tablet) {
+    position: relative;
+
     display: grid;
     margin-bottom: 48px;
 
     grid-template-columns: repeat(2, 1fr);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 50%;
+
+      width: 1px;
+      height: calc(100% - 25px);
+
+      background-color: $color-gainsboro;
+      transform: translateX(-50%);
+
+      @media (min-width: $vp-desktop) {
+        left: calc(51% + 4px);
+      }
+    }
   }
 
   @media (min-width: $vp-desktop) {
-    display: grid;
     margin-bottom: 56px;
 
     grid-template-columns: repeat(2, 1fr);
@@ -65,9 +92,15 @@
   padding-bottom: 39px;
 
   border: none;
+
+  @media (min-width: $vp-tablet) {
+    padding-bottom: 16px;
+  }
 }
 
 .feedback__actions {
+  padding: 11px 2px 0 2px;
+
   @media (min-width: $vp-tablet) {
     display: grid;
 
@@ -80,10 +113,20 @@
 }
 
 .feedback__actions-description {
+  margin: 0;
+
   font-size: 12px;
   text-align: right;
   color: $color-night-rider;
   text-transform: uppercase;
 
-  opacity: 0.3;
+  opacity: 0.4;
+
+  @media (min-width: $vp-tablet) {
+    margin: auto 0;
+
+    font-size: 14px;
+
+    transform: translateY(5px);
+  }
 }
