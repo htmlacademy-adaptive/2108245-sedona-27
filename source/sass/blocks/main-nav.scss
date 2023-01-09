@@ -4,7 +4,32 @@
   left: 0;
   z-index: 3;
 
+  display: none;
   width: 100%;
+
+  @media (min-width: $vp-tablet) {
+    display: grid;
+  }
+
+  .no-js & {
+    position: static;
+
+    display: block;
+
+    @media (min-width: $vp-tablet) {
+      display: grid;
+    }
+  }
+
+  .is-open & {
+    display: block;
+
+    @media (min-width: $vp-tablet) {
+      position: static;
+
+      display: grid;
+    }
+  }
 }
 
 .main-nav__toggle {
@@ -21,22 +46,7 @@
   border: none;
   cursor: pointer;
 
-  @media (min-width: $vp-tablet) {
-    display: none;
-  }
-
-  &:hover {
-    opacity: 0.3;
-  }
-
-  &:active,
-  &:focus {
-    opacity: 0.6;
-  }
-}
-
-.main-nav--closed {
-  & .main-nav__toggle::before {
+  &::before {
     content: "";
     position: absolute;
     top: 17px;
@@ -49,75 +59,44 @@
     box-shadow: 0 9px 0 0 $color-seagull, 0 18px 0 0 $color-seagull;
   }
 
-  & .main-nav__list {
-    display: none;
-
-    @media (min-width: $vp-tablet) {
-      display: grid;
-    }
-  }
-}
-
-.main-nav--opened {
-  & .main-nav__toggle {
-    top: 0;
-    right: 0;
-
-    width: 60px;
-    height: 60px;
-
-    background-color: transparent;
-
+  .is-open & {
     &::before,
     &::after {
       content: "";
       position: absolute;
-      top: 25px;
-      left: 14px;
+      top: 26px;
+      right: 17px;
 
-      width: 31px;
+      width: 27px;
       height: 4px;
 
-      background-color: #ffffff;
+      background-color: $color-default-white;
+      box-shadow: none;
     }
 
     &::before {
-      box-shadow: none;
       transform: rotate(45deg);
     }
 
     &::after {
       transform: rotate(-45deg);
     }
-
-    &:active::before,
-    &:active::after {
-      background-color: fade(#ffffff, 30%);
-    }
   }
 
-  & .main-nav__list {
-    display: block;
-
-    @media (min-width: $vp-tablet) {
-      display: grid;
-    }
-  }
-}
-
-.main-nav--nojs {
-  & .main-nav__toggle {
+  .no-js & {
     display: none;
   }
 
-  & .main-nav__list {
-    position: static;
+  @media (min-width: $vp-tablet) {
+    display: none;
+  }
 
-    display: block;
-    margin-top: 96px;
+  &:hover {
+    opacity: 0.3;
+  }
 
-    @media (min-width: $vp-tablet) {
-      margin-top: 0;
-    }
+  &:active,
+  &:focus {
+    opacity: 0.6;
   }
 }

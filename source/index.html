@@ -17,15 +17,12 @@
 
 <body>
   <div class="wrapper">
-    <header class="main-header">
+    <!--Класс no-js в хедере добавляет поведение при отсутсвии скриптов-->
+    <header class="main-header no-js">
       <span class="main-header__logo">
-        <img class="main-header__logo-image" src="images/svg/logo.svg" alt="Логотип сайта городка Седоны." width="185"
-          height="96" />
+        <img class="main-header__logo-image" src="images/svg/logo.svg" alt="Логотип сайта городка Седоны." width="185" height="96" />
       </span>
-      <!-- main-nav--nojs - отключен js-->
-      <!-- main-nav--closed - меню закрыто-->
-      <!-- main-nav--open - меню открыто -->
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть/закрыть меню.</span>
         </button>

@@ -13,6 +13,22 @@
   z-index: 1;
 
   transform: translateX(-50%);
+
+  .no-js & {
+    display: none;
+
+    @media (min-width: $vp-tablet) {
+      display: block;
+    }
+  }
+
+  .is-open & {
+    display: none;
+
+    @media (min-width: $vp-tablet) {
+      display: block;
+    }
+  }
 }
 
 .main-header__logo-image {
