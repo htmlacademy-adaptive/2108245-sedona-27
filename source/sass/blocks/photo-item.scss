@@ -53,6 +53,12 @@
       padding-top: 320px;
     }
   }
+
+  &:nth-child(2n) {
+    @media (min-width: $vp-tablet) {
+      background-color: $color-whisper-a;
+    }
+}
 }
 
 .photo-item__image {

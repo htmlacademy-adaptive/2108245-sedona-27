@@ -22,12 +22,6 @@
   }
 }
 
-.photo__wrapper .photo-item:nth-child(2n) {
-  @media (min-width: $vp-tablet) {
-    background-color: $color-whisper-a;
-  }
-}
-
 .photo__title {
   max-width: 458px;
   margin: 0 auto;
@@ -59,5 +53,19 @@
 .photo__text br {
   @media (max-width: calc($vp-tablet - 1px)) {
     display: none;
+  }
+}
+
+.photo__link {
+  display: block;
+  outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active,
+  &:focus {
+    opacity: 0.7;
   }
 }
