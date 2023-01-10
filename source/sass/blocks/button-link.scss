@@ -3,7 +3,7 @@
   width: 100%;
   padding: 16px;
 
-  font: inherit;
+  font-family: inherit;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
@@ -21,10 +21,9 @@
 
   &:active,
   &:focus {
-    color: $color-white-transparent;
+    color: rgba($color-default-white, 0.3);
 
     background-color: $color-shakespeare-549;
-    outline: none;
   }
 
   &:disabled {

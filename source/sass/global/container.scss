@@ -11,12 +11,15 @@
   @media (min-width: $vp-desktop) {
     padding: 0 120px;
   }
+}
 
-  &--photo {
-    padding: 0 20px;
+.container-photo {
+  width: 100%;
+  min-width: $vp-mobile;
+  margin: 0 auto;
+  padding: 0 20px;
 
-    @media (min-width: $vp-tablet) {
-      padding: 0 60px;
-    }
+  @media (min-width: $vp-tablet) {
+    padding: 0 60px;
   }
 }
