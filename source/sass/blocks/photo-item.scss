@@ -28,8 +28,8 @@
   }
 
   @media (min-width: $vp-desktop) {
-    padding-top: 187px;
     display: flex;
+    padding-top: 187px;
   }
 
   &--main {
@@ -58,7 +58,7 @@
     @media (min-width: $vp-tablet) {
       background-color: $color-whisper-a;
     }
-}
+  }
 }
 
 .photo-item__image {
@@ -79,6 +79,7 @@
     position: absolute;
     top: 0;
     left: 0;
+
     min-width: 100%;
     min-height: 100%;
   }
@@ -94,12 +95,13 @@
   @media (min-width: $vp-desktop) {
     position: relative;
     z-index: 1;
+
+    flex-grow: 1;
     padding: 22px 25px 15px 21px;
 
     color: $color-default-white;
 
     background-color: rgba($color-default-black, 0.3);
-    flex-grow: 1;
   }
 
   &--small {
@@ -140,8 +142,9 @@
   display: flex;
 
   @media (min-width: $vp-tablet) {
-    transform: translateY(-7px);
     margin-top: 12px;
+
+    transform: translateY(-7px);
   }
 
   @media (min-width: $vp-desktop) {
@@ -161,8 +164,8 @@
   cursor: pointer;
 
   @media (min-width: $vp-tablet) {
-    margin-right: 9px;
     display: flex;
+    margin-right: 9px;
   }
 
   @media (min-width: $vp-desktop) {
