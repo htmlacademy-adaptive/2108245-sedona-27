@@ -9,6 +9,7 @@
 
   @media (min-width: $vp-tablet) {
     display: grid;
+    position: static;
   }
 
   .no-js & {

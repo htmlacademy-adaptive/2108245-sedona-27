@@ -11,7 +11,7 @@
 }
 
 .user-opinion__title {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 20px;
   padding-top: 26px;
 
@@ -70,11 +70,17 @@
     }
   }
 
-  &:active,
-  &:focus {
+  &:active {
     & .user-opinion__control-radio {
       background-color: $color-light-grey-6;
       outline: none;
+    }
+  }
+
+  &:focus {
+    & .user-opinion__control-radio {
+      background-color: $color-light-grey-6;
+      outline: 2px solid $color-seagull;
     }
   }
 }
@@ -119,4 +125,8 @@
   opacity: 0.3;
 
   pointer-events: none;
+}
+
+.user-opinion__control-input:focus + .user-opinion__control-radio {
+  outline: 2px solid $color-seagull;
 }

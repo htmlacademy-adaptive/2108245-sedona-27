@@ -2,7 +2,7 @@
   position: relative;
 
   padding-top: 90px;
-  padding-bottom: 81px;
+  padding-bottom: 83px;
 
   text-align: center;
 
@@ -69,9 +69,8 @@
     }
   }
 
-  &--inner,
-  &--form-inner {
-    padding: 52px 45px 67px 45px;
+  &--inner {
+    padding: 52px 46px 67px 45px;
 
     background-image: url("../images/welcome-inner-mobile@1x.jpg");
 
@@ -83,7 +82,7 @@
 
     @media (min-width: $vp-tablet) {
       min-height: 290px;
-      padding-top: 95px;
+      padding: 95px 154px 64px 157px;
 
       background-image: url("../images/welcome-inner-tablet@1x.jpg");
 
@@ -96,25 +95,13 @@
 
     @media (min-width: $vp-desktop) {
       min-height: 301px;
-      padding-top: 102px;
+      padding: 102px 371px 67px 369px;
 
       background-image: url("../images/welcome-inner-desktop@1x.jpg");
 
       @media (min-resolution: 2dppx) {
         background-image: url("../images/welcome-inner-desktop@2x.jpg");
       }
-    }
-  }
-
-  &--form-inner {
-    padding: 52px 45px 67px 45px;
-
-    @media (min-width: $vp-tablet) {
-      padding-top: 95px;
-    }
-
-    @media (min-width: $vp-desktop) {
-      padding-top: 102px;
     }
   }
 }
@@ -124,11 +111,13 @@
   width: 100%;
   max-width: 461px;
   margin: 0 auto;
-  transform: translate(-2px);
 }
 
 .welcome--inner .welcome__image {
   @media (min-width: $vp-desktop) {
+    width: 459px;
+    height: 80px;
+
     transform: translateX(-2px);
   }
 }

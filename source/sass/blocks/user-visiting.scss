@@ -7,7 +7,7 @@
 }
 
 .user-visiting__title {
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 20px;
   padding-top: 26px;
 
@@ -46,9 +46,16 @@
     display: flex;
     flex-wrap: wrap;
     max-width: none;
-    padding: 41px 44px 64px 45px;
+    margin-left: -4px;
+    padding: 41px 2% 64px 5%;
 
     gap: 63px;
+  }
+}
+
+.user-visiting__content-item {
+  @media (min-width: $vp-desktop) {
+    max-width: 184px;
   }
 }
 
@@ -114,4 +121,8 @@
   background-image: url("../images/svg/tick-active.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.user-visiting__control-input:focus + .user-visiting__control-checkbox {
+  outline: 2px solid $color-seagull;
 }
